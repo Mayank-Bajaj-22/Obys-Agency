@@ -60,29 +60,11 @@ function cursorAnimation(){
   });
 };
 
-// gsap.utils.toArray("#nav3 h3, .dot").forEach((el) => {
-//   el.addEventListener("mousemove", (e) => {
-//     const bounding = el.getBoundingClientRect();
-//     const magnetStrength = 100; // Increase to expand the effect
-//     const xMove = (e.clientX - (bounding.left + bounding.width / 2)) / magnetStrength;
-//     const yMove = (e.clientY - (bounding.top + bounding.height / 2)) / magnetStrength;
-//     gsap.to(el, {
-//       x: xMove * 800, // Increase for more pull
-//       y: yMove * 800,
-//       duration: 1.4, // Longer duration for a smoother feel
-//       ease: "power2.out",
-//     });
-//   });
-
-//   el.addEventListener("mouseleave", () => {
-//     gsap.to(el, {
-//       x: 0,
-//       y: 0,
-//       duration: 1.4, // Smooth return
-//       ease: "power3.out",
-//     });
-//   });
-// });
-
+Shery.makeMagnet("#nav h3, #nav1 .dot", {
+  // ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  // duration: 1,
+  ease: "expo.out",
+  duration:1.5,
+});
 
 cursorAnimation(); 
