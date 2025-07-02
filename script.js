@@ -27,7 +27,8 @@ function loadingAnimation() {
   tl.to("#loader", {
     opacity: 0,
     duration: 0.2,
-    delay: 4,
+    delay: 0,
+    // 4
   });
   tl.from("#page1", {
     y: 1600,
