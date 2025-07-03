@@ -21,11 +21,17 @@
 html, body {
     height: 100%;
     width: 100%;   
-    overflow: hidden;   
+    /* overflow: hidden;    */
+    overflow-y: visible;
 }
 
 body {
     overflow-x: hidden;
+}
+
+#page2, #page3, #page4, #footer {
+  position: relative;
+  z-index: 1;
 }
 
 #loader {
@@ -125,6 +131,7 @@ body {
 #main {
     position: relative;
     background-color: #151515;
+    overflow: visible;
 }
 
 #page1 {
@@ -1131,7 +1138,7 @@ body {
     }
 
     .underline5 {
-        height: 1px;
+        height: 1.5px;
         margin: 4vw 0;
     }
 
@@ -1142,6 +1149,56 @@ body {
 
     #last {
         width: 70%;
+    }
+
+    #loader {
+        max-height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 999; /* position: static, then z index will not work in other case it will work */
+        background-color: #0B0B0B;
+        padding: 25vh 4vw;
+        display: block;
+    }
+
+    .line {
+        /* background-color: burlywood; */
+        height: fit-content;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4vw;
+    }
+
+    #line1-part1 {
+        gap: 4vw;
+    }
+
+    #line1-part1 h5, #line1-part1 h6 {
+        margin-top: 1vw;
+        font-size: 5vw;
+    }
+
+    #line1-part1 h5 {
+        width: 4vw;
+        text-align: right;
+    }
+
+    .line h1 {
+        font-size: 8vw;
+    }
+
+    .line h2 {
+        font-size: 7.5vw;
+        margin: 8vw;
+    }
+
+    #waiting h4 {
+        padding-top: 5vw;
+        padding-left: 30px;
+        font-size: 3vw;
     }
 
 }
