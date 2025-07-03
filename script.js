@@ -51,7 +51,7 @@ function loadingAnimation() {
         } else {
           h5timer.innerHTML = grow;
         }
-      }, 33);
+      }, 30);
     },
   });
   tl.to(".line h2", {
@@ -100,8 +100,8 @@ function cursorAnimation() {
   })
 
   Shery.makeMagnet("#nav h3, #nav1 .dot", {
-    // ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    // duration: 1,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
     ease: "expo.out",
     duration:1.5,
   });
@@ -179,3 +179,85 @@ document.querySelector("#hero3").addEventListener("mouseleave", function(){
     opacity:0,
   })
 })
+
+gsap.from(".underline5", {
+  scrollTrigger: {
+    trigger: "#footer",    
+    start: "top 20%",      
+    scroller: "#main",   
+  },   
+  opacity: 0,
+  x: 100,
+  duration: 1.5,
+  ease: "power2.out"
+});
+
+gsap.from("#footer .underline", {
+  scrollTrigger: {
+    trigger: "#footer",       
+    start: "top 60%",      
+    scroller: "#main",  
+  },
+  opacity: 0,
+  x: 100,
+  duration: 1.5,
+  ease: "power2.out"
+});
+
+gsap.from("#page3 .underline", {
+  scrollTrigger: {
+    trigger: "#page3",     
+    start: "top 60%",      
+    scroller: "#main",       
+  },
+  opacity: 0,
+  x: 100,
+  duration: 1.5,
+  ease: "power2.out"
+});
+
+gsap.from("#page3 .underline10", {
+  scrollTrigger: {
+    trigger: "#page3",     
+    start: "top -30%",      
+    scroller: "#main",       
+  },
+  opacity: 0,
+  x: 100,
+  duration: 1.5,
+  ease: "power2.out"
+});
+
+gsap.from("#page4 .underline", {
+  scrollTrigger: {
+    trigger: "#page4",     
+    start: "top 60%",      
+    scroller: "#main",       
+  },
+  opacity: 0,
+  x: 100,
+  duration: 1.5,
+  ease: "power2.out"
+});
+
+
+// tl.from(".line h1", {
+//     y: 150,
+//     stagger: 0.25,
+//     duration: 0.6,
+//     delay: 0.5,
+//   });
+
+gsap.from("#footer h1", {
+  scrollTrigger: {
+    trigger: "#footer",
+    start: "top 60%",
+    scroller: "#main",
+  },
+  opacity: 0,
+  y: 100,
+  rotate: 360,
+  duration: 1,
+  ease: "power2.out"
+});
+

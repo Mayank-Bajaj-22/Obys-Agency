@@ -787,7 +787,7 @@ body {
 .mousefollower {
     border: 2px solid #fff;
     background-color: rgb(255, 255, 255);
-    scale: 2    ;
+    scale: 2;
     mix-blend-mode: difference;
     transform: translate(-40%,-40%);
 }
@@ -799,4 +799,17 @@ body {
     left: 0;
     transform: translate(-50%, -50%);
     opacity: 0;
+}
+
+#footer h1 img {
+    width: 7vw;
+    /* vertical-align: middle; */
+    margin-right: 1.5vw;
+    margin-top: 0vw;
+}
+
+@media (max-width:600px) {
+    #main {
+        background-color: red;
+    }
 }
