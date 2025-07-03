@@ -247,17 +247,3 @@ gsap.from("#page4 .underline", {
 //     duration: 0.6,
 //     delay: 0.5,
 //   });
-
-gsap.from("#footer h1", {
-  scrollTrigger: {
-    trigger: "#footer",
-    start: "top 60%",
-    scroller: "#main",
-  },
-  opacity: 0,
-  y: 100,
-  rotate: 360,
-  duration: 1,
-  ease: "power2.out"
-});
-
