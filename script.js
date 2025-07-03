@@ -83,29 +83,6 @@ function loadingAnimation() {
   });
 }
 
-function cursorAnimation(){
-  document.addEventListener("mousemove", function(dets){
-    gsap.to("#crsr",{
-      left:dets.x,
-      top:dets.y,
-      duration: 0.2,
-    });
-  });
-};
-
-Shery.makeMagnet("#nav h3, #nav1 .dot", {
-  // ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-  // duration: 1,
-  ease: "expo.out",
-  duration:1.5,
-});
-
-
-loadingAnimation();
-// cursorAnimation(); 
-locomotiveAnimation();
-
-
 function sheryAnimation() {
   Shery.imageEffect(".image-div",{
     style:5,
@@ -115,4 +92,90 @@ function sheryAnimation() {
   })
 }
 
+function cursorAnimation() {
+  Shery.mouseFollower ({
+    skew: true,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+  })
+
+  Shery.makeMagnet("#nav h3, #nav1 .dot", {
+    // ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    // duration: 1,
+    ease: "expo.out",
+    duration:1.5,
+  });
+
+  var videoContainer = document.querySelector("#video-container");
+  var video = document.querySelector("#video-container video")
+
+  videoContainer.addEventListener("mouseenter", function(){
+    videoContainer.addEventListener("mousemove", function(dets){
+      gsap.to(".mousefollower", {
+        opacity:0,
+      })
+      gsap.to("#video-cursor", {
+        left:dets.x - 270,
+        y:dets.y - 150,
+      })
+    })
+  })
+  videoContainer.addEventListener("mouseleave", function(){
+    gsap.to(".mousefollower", {
+      opacity:1,
+    })
+    gsap.to("#video-cursor", {
+      top:"-14%",
+      left:"73%",
+    })
+  })
+
+  var flag = 0;
+  videoContainer.addEventListener("click", function(){
+    if (flag == 0){
+      video.play()
+      video.style.opacity = 1
+      document.querySelector("#video-cursor").innerHTML = `<i class="ri-pause-mini-fill"></i>`
+      gsap.to("#video-cursor", {
+        scale:0.5,
+      })
+      flag = 1;
+    }
+    else{
+      video.pause()
+      video.style.opacity = 0
+      document.querySelector("#video-cursor").innerHTML = `<i class="ri-play-mini-fill"></i>`
+      gsap.to("#video-cursor", {
+        scale:1,
+      })
+      flag = 0;
+    }
+    
+  })
+  
+}
+
+
+loadingAnimation();
+cursorAnimation(); 
+locomotiveAnimation();
 sheryAnimation();
+
+
+document.addEventListener("mousemove", function(dets){
+  gsap.to("#flag", {
+    x:dets.x,
+    y:dets.y,  
+  })
+})
+document.querySelector("#hero3").addEventListener("mouseenter", function(){
+  gsap.to("#flag",{
+    opacity:1,
+  })
+})
+
+document.querySelector("#hero3").addEventListener("mouseleave", function(){
+  gsap.to("#flag",{
+    opacity:0,
+  })
+})
