@@ -1,4 +1,4 @@
-# Obys Agency Clone 🚀
+# Obys Agency Clone 
 
 A visually dynamic and animated portfolio website inspired by [Obys.agency](https://obys.agency), recreated using **GSAP**, **Locomotive Scroll**, **Shery.js**, and **custom CSS**. Built to showcase modern frontend animation techniques and smooth user interaction.
 
