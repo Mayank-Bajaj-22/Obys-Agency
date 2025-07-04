@@ -6,8 +6,7 @@ A visually dynamic and animated portfolio website inspired by [Obys.agency](http
 
 ## 📸 Demo
 
-https://user.github.io/obys-clone/ *(replace with your deployment link)*
-
+My Obys Agency Website Live Preview - [My Clone Preview](https://mayank-bajaj-22.github.io/Obys-Agency/)
 ---
 
 ## 🔥 Features
@@ -122,9 +121,9 @@ cd obys-clone
   
   ## 💬 Let's Connect
 
-  🐦 Twitter
+  🐦 [Twitter](https://x.com/MayankBajaj22)
 
-  💼 LinkedIn
+  💼 [LinkedIn](https://www.linkedin.com/in/mayank-bajaj-439988309/)
 
   📮 Drop a message or collaborate!
 
