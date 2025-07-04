@@ -21,8 +21,9 @@
 html, body {
     height: 100%;
     width: 100%;   
-    /* overflow: hidden;    */
-    overflow-y: visible;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;   
 }
 
 body {
@@ -132,6 +133,7 @@ body {
     position: relative;
     background-color: #151515;
     overflow: visible;
+    min-height: 100vh;
 }
 
 #page1 {
