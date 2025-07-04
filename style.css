@@ -230,7 +230,6 @@ body {
     color: transparent;
     font-weight: 500;
     border-bottom: 0.5vw solid #ffffff00;
-
 }
 
 #hero1::before {
@@ -1205,6 +1204,22 @@ body {
         padding-top: 5vw;
         padding-left: 30px;
         font-size: 3vw;
+    }
+
+    .hero h2:hover{
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        border-bottom: 0.5vw solid #ffffff00;
+    }
+
+    #flag {
+        height: 45vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        opacity: 0;
     }
 
 }
