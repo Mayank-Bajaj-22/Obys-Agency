@@ -172,6 +172,13 @@ document.querySelector("#hero3").addEventListener("mouseleave", function(){
   })
 })
 
+
+loadingAnimation();
+cursorAnimation(); 
+locomotiveAnimation();
+sheryAnimation();
+
+
 gsap.from(".underline5", {
   scrollTrigger: {
     trigger: "#footer",    
@@ -231,25 +238,3 @@ gsap.from("#page4 .underline", {
   duration: 1.5,
   ease: "power2.out"
 });
-
-
-// tl.from(".line h1", {
-//     y: 150,
-//     stagger: 0.25,
-//     duration: 0.6,
-//     delay: 0.5,
-//   });
-
-
-// const loader = document.querySelector("#loader");
-// loader.style.display = "block";
-// loader.style.opacity = 1;
-
-
-
-loadingAnimation();
-cursorAnimation(); 
-locomotiveAnimation();
-sheryAnimation();
-
-
